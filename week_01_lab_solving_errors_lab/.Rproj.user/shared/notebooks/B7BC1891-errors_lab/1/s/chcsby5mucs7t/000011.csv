@@ -1,0 +1,16 @@
+"0","animals3 <- c(""cat"", ""dog"", ""rabbit"", ""horse"")
+sample(animals3, 10, replace = T)
+"
+"1"," [1]"
+"1"," ""dog""  "
+"1"," ""cat""  "
+"1"," ""horse"""
+"1"," ""horse"""
+"1"," ""cat""  "
+"1"," ""dog""  "
+"1"," ""cat""  "
+"1"," ""dog""  "
+"1"," ""dog""  "
+"1"," ""dog""  "
+"1","
+"
