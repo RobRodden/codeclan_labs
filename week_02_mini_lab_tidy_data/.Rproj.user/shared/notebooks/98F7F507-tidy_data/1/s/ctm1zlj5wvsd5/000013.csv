@@ -1,0 +1,7 @@
+"0",""
+"0","country_alt_data <- pivot_wider(long_data,"
+"0","  names_from = c(""type"", ""year""),"
+"0","  values_from = ""value"""
+"0",")"
+"0",""
+"0","country_alt_data"
