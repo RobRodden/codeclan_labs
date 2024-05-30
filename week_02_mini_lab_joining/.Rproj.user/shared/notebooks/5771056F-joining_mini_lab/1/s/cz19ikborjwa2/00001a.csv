@@ -1,0 +1,12 @@
+"0","actors_ranked <- actors_movies_roles_joined %>%"
+"0","  mutate(rank = as.numeric(rank)) %>% "
+"0","  group_by(first_name, last_name) %>% "
+"0","  summarise(mean_rank = mean(rank, na.rm = T)) %>%"
+"0","  ungroup()"
+"2","Warning: [38;5;255mThere was 1 warning in `mutate()`.[39m
+[38;5;255m[36mℹ[38;5;255m In argument: `rank = as.numeric(rank)`.[39m
+Caused by warning:
+[33m![39m NAs introduced by coercion"
+"2","`summarise()` has grouped output by 'first_name'. You can override using the `.groups` argument."
+"0","actors_ranked %>% "
+"0","  slice_max(mean_rank, n = 5)"

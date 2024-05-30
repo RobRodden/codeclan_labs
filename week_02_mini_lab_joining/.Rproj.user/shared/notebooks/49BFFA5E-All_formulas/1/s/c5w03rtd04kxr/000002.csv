@@ -1,0 +1,20 @@
+"0","```r
+raw_data_trimmed <- raw_data_trimmed %>%
+  mutate(count = if_else(is.na(count), \"Eligible\", if_else(count == \"Eligible\", \"Eligible\", \"Not eligible\"))) %>% 
+  rename(eligible_for_ip_1m_measure = count)
+
+# The code you provided is performing a series of operations on the raw_data_trimmed data frame. Let's break it down step by step:
+
+mutate() Function:
+mutate(count = if_else(is.na(count), \"Eligible\", if_else(count == \"Eligible\", \"Eligible\", \"Not eligible\"))) #This part of the code uses the mutate() function to create or modify a column called count. The if_else() function is used to assign values to the count column based on certain conditions.
+
+is.na(count) # checks if the value in the count column is NA.
+# If the value is NA, it is assigned the string \"Eligible\".
+# If the value is not NA and is equal to \"Eligible\", it is assigned \"Eligible\".
+# If neither of the above conditions is met, the value is assigned \"Not eligible\".
+
+rename() Function:
+rename(eligible_for_ip_1m_measure = count) # This part of the code uses the rename() function to rename the count column to eligible_for_ip_1m_measure.
+
+# In summary, the code first modifies the count column based on certain conditions using mutate(), and then renames the modified count column to eligible_for_ip_1m_measure using rename(). The result is a data frame with a modified and renamed column.
+```"

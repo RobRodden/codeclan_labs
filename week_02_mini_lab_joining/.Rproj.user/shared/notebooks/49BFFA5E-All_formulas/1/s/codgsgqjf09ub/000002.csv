@@ -1,0 +1,24 @@
+"0","```r
+```r
+```r
+```r
+avocado_tidy_augmented <- avocado %>% 
+mutate(date_alt = as.POSIXct.Date(date),
+       hour = hour(date_alt),
+       qday = qday(date_alt),
+        day = wday(date_alt),
+        month = month(date_alt, label = TRUE),
+        quarter = quarter(date_alt),
+       type = as.factor(type),
+       region = as.factor(region),
+       season_quarter = case_when(month == \Mar\ | month == \Apr\ | month == \May\ ~ \Spring\,
+                                month == \Jun\ | month == \Jul\ | month == \Aug\ ~ \Summer\,
+                                month == \Sep\ | month == \Oct\ | month == \Nov\ ~\Autumn\,
+    TRUE ~ \Winter\
+      ),
+    season_quarter = factor(season_quarter, c(\Spring\, \Summer\, \Autumn\, \Winter\)))
+avocado_tidy_augmented
+```
+```
+```
+```"

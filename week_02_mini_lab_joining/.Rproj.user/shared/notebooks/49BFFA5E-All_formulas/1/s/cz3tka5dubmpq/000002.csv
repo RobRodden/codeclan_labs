@@ -1,0 +1,17 @@
+"0","```r
+```r
+```r
+# Calculate the count of NA values in each column
+na_counts <- raw_data_trimmed %>%
+  summarise_all(~ sum(is.na(.)))
+
+na_counts <- raw_data_trimmed %>%
+  summarise(across(everything(), ~ sum(is.na(.))))
+
+sleep %>% 
+count(extra) %>% 
+  arrange(desc(extra)) %>% 
+  head(10)
+```
+```
+```"
