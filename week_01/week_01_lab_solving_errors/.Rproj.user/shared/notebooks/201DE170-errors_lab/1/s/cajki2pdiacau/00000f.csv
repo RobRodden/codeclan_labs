@@ -1,0 +1,7 @@
+"0","iris %>% 
+  select(Sepal.Width, Species) %>% 
+  arrange(Sepal.Length)
+"
+"2","Error in iris %>% select(Sepal.Width, Species) %>% arrange(Sepal.Length) : 
+  could not find function ""%>%""
+"
