@@ -1,0 +1,46 @@
+"0","```r
+test_that(\"meteorites test characters and logical return an error or DF in wrong place\", {
+  expect_error(get_meteorite_count(\"house\", 2010))
+  expect_error(get_meteorite_count(2010, 2010))
+  expect_error(get_meteorite_count(2010, meteorite_landings_per_year))
+  expect_error(get_meteorite_count(\"house\", meteorite_landings_per_year))
+})
+
+test_that(\"meteorites test characters and logical return an error\", {
+expect_s3_class(meteorite_landings_per_year, \"data.frame\", exact = T)
+#  expect_equal(get_meteorite_count(meteorite_landings_per_year, 2010), meteorite_landings_per_year, 2010)
+#  expect_error(get_meteorite_count(FALSE, 2010))
+
+})
+
+class(year_input)
+
+test_that(\"multiplication works\", {
+  expect_equal(2 * 2, 4)
+})
+
+
+class(year_input)
+
+test_that(\"meteorites test characters and logical return an error\", {
+  expect_error(get_meteorite_count(meteorite_landings_per_year,\"house\"))
+  expect_error(get_meteorite_count(meteorite_landings_per_year, TRUE))
+})
+
+test_that(\"meteorites test characters and logical return an error or DF in wrong place\", {
+#  expect_error(get_meteorite_count(\"house\", 2010))
+#  expect_error(get_meteorite_count(2010, 2010))
+  expect_error(get_meteorite_count(meteorite_landings_per_year, \"meteorite_landings_per_year\"))
+#  expect_error(get_meteorite_count(\"house\", meteorite_landings_per_year))
+})
+
+test_that(\"Real leap years return true\", {
+  expect_equal(get_meteorite_count(meteorite_landings_per_year, expect_type(year_input, \"double\")))
+#  expect_equal(is_leap_year(2000), TRUE)
+})
+
+# alternatively we could use the following on the year argument where if it does not equal double it will explicitly report a \"Failure\"
+test_that(\"meteorites test characters and logical return an error\", {
+expect_type(year_input, \"double\")
+})
+```"

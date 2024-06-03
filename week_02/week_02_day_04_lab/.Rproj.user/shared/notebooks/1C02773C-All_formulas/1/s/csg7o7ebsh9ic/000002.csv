@@ -1,0 +1,35 @@
+"0","```r
+tothepower_data <- data_frame(
+  column_name = c(\"Test line 1\", \"Test line 2\", \"Test line 3\", \"Test line 4\"),
+  values_1 = c(-0.75, 25, -29, 26),
+  values_2 = c(0.080, 170, 0.185, 169)
+)
+friends_data
+
+tothepower_data_test <- tothepower_data %>% 
+  mutate(test = values_1^values_2)
+tothepower_data_test
+
+friends_data_test <- friends_data %>% 
+  mutate(test = as.complex(age)^height)
+friends_data_test
+
+
+tib <- tibble(v1 = 1:4, 
+              v2 = 1:4,
+              v3 = sample(1:5, 4, replace = FALSE))
+tib
+
+new_tib <- tib %>% 
+  mutate_at(vars(v1:v3), recode, `1` = 5, `2` = 4, `3` = 3, `4` = 2, `5` = 1)
+#> # A tibble: 4 x 3
+#>      v1    v2    v3
+#>   <dbl> <dbl> <dbl>
+#> 1     5     5     2
+#> 2     4     4     5
+#> 3     3     3     4
+#> 4     2     2     1
+new_tib
+
+# https://stackoverflow.com/questions/58306794/what-is-the-shortest-and-cleanest-way-to-recode-multiple-variables-in-a-datafram
+```"

@@ -1,0 +1,29 @@
+"0","```r
+library(dplyr)
+library(tidyr)
+
+columns_to_summarize <- c(
+  c(\"source\", \"unique_id\", \"vs\"),
+  c(\"primary_industry_team\", \"primary_industry_team_2\"),
+  c(\"region_area2\", \"region_2\"),
+  c(\"delivered_product_date_exclude_before_or_after_date\", \"scottish_int_exporter_after_1st_october_2014\"),
+  c(\"product_id_crm_name_t_code\", \"product_id_crm_name_t_code_2\"),
+  c(\"company\", \"company_2\")
+)
+
+summary_data <- data.frame()  # Initialize an empty data frame
+
+for (columns in columns_to_summarize) {
+  summary <- raw_data_cleaned %>%
+    select(all_of(columns)) %>%
+    pivot_longer(everything(), names_to = \"Column\", values_to = \"Value\") %>%
+    group_by(Column, Value) %>%
+    summarise(Count = n()) %>% 
+    arrange(desc(Count))
+  
+  summary_data <- bind_rows(summary_data, summary)
+}
+
+print(summary_data)
+
+```"

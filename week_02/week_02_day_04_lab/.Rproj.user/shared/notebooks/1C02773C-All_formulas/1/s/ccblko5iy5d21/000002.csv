@@ -1,0 +1,8 @@
+"0","```r
+```r
+```r
+movies_imputed <- movies_imputed %>%
+  mutate(budget_inc_median = if_else(budget < 100, median(budget), budget))
+```
+```
+```"

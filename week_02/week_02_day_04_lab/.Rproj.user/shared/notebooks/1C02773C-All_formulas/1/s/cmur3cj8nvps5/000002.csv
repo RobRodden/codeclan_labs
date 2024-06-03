@@ -1,0 +1,29 @@
+"0","```r
+```r
+# Define a custom function to create plots based on column type
+plot_variable <- function(data, var_name) {
+  p <- ggplot(data, aes_string(x = var_name)) +
+    labs(title = paste(\Distribution of\, var_name), x = var_name, y = \Count\) +
+    theme_bw()
+  
+  if (is.numeric(data[[var_name]])) {
+    p + geom_histogram(bins = 30, fill = \blue\, alpha = 0.7) +
+      scale_x_continuous(breaks = seq(min(data[[var_name]], na.rm = TRUE), max(data[[var_name]], na.rm = TRUE), by = 1))
+  } else {
+    p + geom_bar(fill = \blue\, alpha = 0.7)
+  }
+}
+
+# List of columns to plot
+cols_to_plot <- c(\film_count\, \gender\)
+
+# Create plots
+plots <- lapply(cols_to_plot, function(col) plot_variable(actors, col))
+
+# Display plots (print each plot)
+for (p in plots) {
+  print(p)
+}
+
+```
+```"

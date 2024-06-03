@@ -1,0 +1,8 @@
+"0","```r
+```r
+poll <- read_csv(\data/election_data.csv\)
+
+glimpse(poll)
+head(poll)
+```
+```"

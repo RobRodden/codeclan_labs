@@ -1,0 +1,56 @@
+"0","```r
+```r
+
+# Get all object names in the environment
+all_objects <- ls()
+
+# Loop through each object and check if it's a data frame
+for (obj in all_objects) {
+  if (is.data.frame(get(obj))) {
+    print(paste(\Data for:\, obj))
+    
+    # Get the data frame
+    df <- get(obj)
+    
+    # Summarise NA and empty counts for each column
+    summary_df <- df %>%
+      select(everything()) %>%
+      summarise_all(list(
+        NA_count = ~ sum(is.na(.)),
+        Empty_count = ~ sum(. == \\, na.rm = TRUE)
+      )) %>%
+      pivot_longer(cols = everything(),
+                   names_to = \columns\,
+                   values_to = \Empty_count\) %>%
+      filter(Empty_count != 0) %>%
+      arrange(desc(Empty_count))
+    
+    # Create the plot
+    p <- ggplot(summary_df, aes(y = reorder(columns, desc(Empty_count)),
+                                x = Empty_count,
+                                fill = Empty_count)) +
+      geom_col() +
+      geom_label(aes(label = Empty_count)) +
+      annotate(\text\,
+               x = Inf,
+               y = Inf,
+               label = paste(\total cells:\,
+                             nrow(df) * ncol(df),
+                             \ nrows\,
+                             nrow(df)),
+               hjust = 1.1,
+               vjust = 1.1,
+               size = 3,
+               color = \black\) +
+      scale_fill_distiller(palette = \Spectral\) +
+      theme_minimal() +
+      labs(title = paste(\a) Empty & NA Cell Count for\, obj),
+           x = \Number of empty cells\,
+           y = \Columns with empty or NA cells\)
+    
+    # Print the plot
+    print(p)
+  }
+}
+```
+```"

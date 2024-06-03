@@ -1,0 +1,13 @@
+"0","```r
+# for reference, we wouldn't actually do this
+grades_dummy <- grades %>% 
+  mutate(
+    english = if_else(subject == \"english\", 1, 0),
+    maths = if_else(subject == \"maths\", 1, 0),
+    physics = if_else(subject == \"physics\", 1, 0),
+    french = if_else(subject == \"french\", 1, 0),
+    biology = if_else(subject == \"biology\", 1, 0)) %>% 
+  select(-subject)
+
+grades_dummy
+```"
