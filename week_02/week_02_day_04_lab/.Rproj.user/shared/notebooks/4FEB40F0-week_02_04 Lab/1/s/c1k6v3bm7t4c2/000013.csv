@@ -1,0 +1,24 @@
+"0","diet_comp_clean <- pivot_longer(dietary_comp_by_country,"
+"0","  c(alcoholic_beverages_fao_2017:wheat_fao_2017),"
+"0","  names_to = ""kcal_source"","
+"0","  values_to = ""avg_daily_kcals"""
+"0",")"
+"0",""
+"0","glimpse(diet_comp_clean)"
+"1","Rows: 224,525"
+"1",""
+"1","
+"
+"1","Columns: 5"
+"1",""
+"1","
+"
+"1","$ entity          [3m[38;5;246m<chr>[39m[23m ""Afghanistan"", ""Afghanistan"", ""Afghanistan"", ""Afghanistan"", ""Afghanistan"", ""Afghanistan"", ""Afghan…
+$ code            [3m[38;5;246m<chr>[39m[23m ""AFG"", ""AFG"", ""AFG"", ""AFG"", ""AFG"", ""AFG"", ""AFG"", ""AFG"", ""AFG"", ""AFG"", ""AFG"", ""AFG"", ""AFG"", ""AFG"",…
+$ year            [3m[38;5;246m<dbl>[39m[23m 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1…
+$ kcal_source     [3m[38;5;246m<chr>[39m[23m ""alcoholic_beverages_fao_2017"", ""animal_fats_fao_2017"", ""barley_fao_2017"", ""bovine_meat_fao_2017""…
+$ avg_daily_kcals [3m[38;5;246m<dbl>[39m[23m 0, 47, 237, 28, 16, 4, 0, 60, 380, 3, 98, 0, 55, 17, NA, 2, 16, 209, 25, 51, NA, 2, 26, 22, 1688,…"
+"1",""
+"1","
+"
+"0","view(diet_comp_clean)"

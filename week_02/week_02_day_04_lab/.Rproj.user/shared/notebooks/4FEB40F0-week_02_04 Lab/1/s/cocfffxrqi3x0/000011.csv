@@ -1,0 +1,6 @@
+"0","uk_diet %>%"
+"0","  group_by(year) %>%"
+"0","  summarise(total_kcals = sum(avg_daily_kcals)) %>%"
+"0","  arrange(year) %>%"
+"0","  mutate(total_kcals_ly = lag(total_kcals)) %>%"
+"0","  mutate(diff = total_kcals - total_kcals_ly)"

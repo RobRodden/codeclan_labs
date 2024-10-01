@@ -1,0 +1,6 @@
+"0","diet_comp_clean %>%"
+"0","  filter(year >= 1990 & year <= 2000) %>%"
+"0","  filter(kcal_source == ""alcoholic beverages"") %>%"
+"0","  group_by(year) %>%"
+"0","  slice_max(avg_daily_kcals) %>%"
+"0","  select(year, country, avg_daily_kcals, kcal_source)"

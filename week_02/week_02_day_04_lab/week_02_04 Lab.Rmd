@@ -73,7 +73,7 @@ di_data_file %>%
 Question 2
 Change the data to long format with food categories going to a column called kcal_source and the calorie values going to a column called avg_daily_kcals. Save into variable diet_comp_clean
 ```{r}
-diet_comp_clean <- pivot_longer(dietary_composition_by_country,
+diet_comp_clean <- pivot_longer(dietary_comp_by_country,
   c(alcoholic_beverages_fao_2017:wheat_fao_2017),
   names_to = "kcal_source",
   values_to = "avg_daily_kcals"
@@ -260,13 +260,13 @@ top_calory(diet_comp_clean,
 Question 13
 Use your function to find the top calorie source in 1970 for all countries starting with B.
 ```{r}
-countries_b <- diet_comp_clean %>%
+countries_start_b <- diet_comp_clean %>%
   filter(str_detect(country, "^B")) %>%
   distinct(country) %>%
   pull()
 
 top_calory(diet_comp_clean,
-  countries = countries_b,
+  countries = countries_start_b,
   years = 1970
 )
 ```
