@@ -1,6 +1,0 @@
-"0","movie_data <- read.csv(""data/movies.csv"")"
-"0",""
-"0","# Here is where I viewed the data, important for me to visualise its current layout"
-"0","view(movie_data)"
-"2","Error in view(movie_data) : could not find function ""view""
-"
