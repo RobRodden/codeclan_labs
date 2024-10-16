@@ -26,9 +26,9 @@ message <- c("does", "this" "work", "?")
 
 toupper(messege)
 
-### Error: <text>:1:29: unexpected string constant
-### 1: message <- c("does", "this" "work"
-###                                 ^
+#### Error: <text>:1:29: unexpected string constant
+#### 1: message <- c("does", "this" "work"
+####                                 ^
 
 
 ## Error 3.
@@ -38,8 +38,8 @@ mtcars %>%
   select(mpg, cyl, disp) %>>%
   filter(mpg < 20)
 
-### Error in mtcars %>% select(mpg, cyl, disp) %>>% filter(mpg < 20): could not find function "%>>%"
-### 
+#### Error in mtcars %>% select(mpg, cyl, disp) %>>% filter(mpg < 20): could not find function "%>>%"
+
 
 ## Error 4.
 Select columns Sepal.Length, Sepal.Width, and Species and arrange by Sepal Length.
@@ -47,7 +47,7 @@ iris %>%
   select(Sepal.Width, Species) %>% 
   arrange(Sepal.Length)
 
-### Error in iris %>% select(Sepal.Width, Species) %>% arrange(Sepal.Length): could not find function "%>%"
+#### Error in iris %>% select(Sepal.Width, Species) %>% arrange(Sepal.Length): could not find function "%>%"
 
 
 ## Error 5.
