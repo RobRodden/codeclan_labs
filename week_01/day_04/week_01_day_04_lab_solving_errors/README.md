@@ -7,9 +7,9 @@ Use what you have learned in the errors lesson to solve these errors. Remember: 
 
 Note: You may have to fix more than one thing per code chunk to escape the errors!
 
-MVP
+# MVP
 
-Error 1.
+## Error 1.
 Create some_letters which is a character vector containing the following letters: “E”, “R”, “R”, “O” and “R”.
 
 some_letters <- ("E", "R", "R", "O", "R)
@@ -19,7 +19,7 @@ Error: <text>:1:21: unexpected ','
                        ^
 
 
-Error 2.
+# Error 2.
 Create message which is a vector containing the following strings: “does”, “this”, “work” and “?”, then convert the vector to uppercase using toupper.
 
 message <- c("does", "this" "work", "?")
