@@ -1,25 +1,14 @@
-### Data Files###
-*.csv
-*.dat
-*.efx
-*.gbr
-*.key
-*.pps
-*.ppt
-*.pptx
-*.sdf
-*.tax2010
-*.vcf
-*.xlr
-*.xls
-*.xlsx
-*.xml
-
 ### macOS ###
 # General
 .DS_Store
 .AppleDouble
 .LSOverride
+
+week_01/.DS_Store
+week_01/day_04/.DS_Store
+week_01/day_04/week_01_day_04_lab_solving_errors/.DS_Store
+week_02/.DS_Store
+week_03/.DS_Store
 
 # Icon must end with two \r
 Icon
