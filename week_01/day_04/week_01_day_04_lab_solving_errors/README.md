@@ -39,7 +39,7 @@ mtcars %>%
   filter(mpg < 20)
 
 ### Error in mtcars %>% select(mpg, cyl, disp) %>>% filter(mpg < 20): could not find function "%>>%"
-
+### 
 
 ## Error 4.
 Select columns Sepal.Length, Sepal.Width, and Species and arrange by Sepal Length.
