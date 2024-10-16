@@ -15,8 +15,8 @@ Create some_letters which is a character vector containing the following letters
 some_letters <- ("E", "R", "R", "O", "R)
 
 ### Error: <text>:1:21: unexpected ','
-1: some_letters <- ("E",
-                       ^
+### 1: some_letters <- ("E",
+###                       ^
 
 
 ## Error 2.
