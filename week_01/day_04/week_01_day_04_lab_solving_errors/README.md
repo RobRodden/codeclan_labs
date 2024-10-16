@@ -14,12 +14,12 @@ Create some_letters which is a character vector containing the following letters
 
 some_letters <- ("E", "R", "R", "O", "R)
 
-Error: <text>:1:21: unexpected ','
+### Error: <text>:1:21: unexpected ','
 1: some_letters <- ("E",
                        ^
 
 
-# Error 2.
+## Error 2.
 Create message which is a vector containing the following strings: “does”, “this”, “work” and “?”, then convert the vector to uppercase using toupper.
 
 message <- c("does", "this" "work", "?")
