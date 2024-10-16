@@ -1,5 +1,0 @@
-"0","```r
-# Check for Duplicated Columns
-find_duplicate_cols(movie_data)
-
-```"

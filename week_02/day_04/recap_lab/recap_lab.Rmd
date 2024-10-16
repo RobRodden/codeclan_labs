@@ -1,0 +1,274 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+
+Loading libraries
+```{r}
+library(tidyverse)
+library(janitor)
+library(here)
+library(skimr)
+```
+
+Question 1
+Read in the data containing dietary compositions and familiarise yourself with it.
+```{r}
+dietary_comp_by_country <-
+  read_csv(here("data/dietary-composition-by-country.csv")) %>%
+  clean_names()
+
+view(dietary_comp_by_country)
+
+names(dietary_comp_by_country)
+glimpse(dietary_comp_by_country)
+skim(dietary_comp_by_country)
+
+di_data_file <- dietary_comp_by_country
+
+di_data_file %>%
+  select(everything()) %>%
+  #  mutate(total_count = nrow(.) * ncol(.)) %>%
+  summarise_all(list(
+    NA_count = ~ sum(is.na(.)),
+    Empty_count = ~ sum(. == "", na.rm = TRUE)
+  )) %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "columns",
+    values_to = "Empty_count"
+  ) %>%
+  filter(Empty_count != 0) %>%
+  arrange(desc(Empty_count)) %>%
+  ggplot(aes(
+    y = reorder(columns, desc(Empty_count)),
+    x = Empty_count,
+    fill = Empty_count
+  )) +
+  geom_col() +
+  geom_label(aes(label = Empty_count)) +
+  annotate("text",
+    x = Inf,
+    y = Inf,
+    label = paste(
+      "total cells:",
+      nrow(di_data_file) * ncol(di_data_file),
+      " nrows",
+      nrow(di_data_file)
+    ),
+    hjust = 1.1,
+    vjust = 1.1,
+    size = 3,
+    color = "black"
+  ) +
+  scale_fill_distiller(palette = "Spectral") +
+  theme_minimal() +
+  labs(
+    title = "a) Empty & NA Cell Count",
+    x = "Number of empty cells",
+    y = "Columns with empty or NA cells"
+  )
+```
+
+Question 2
+Change the data to long format with food categories going to a column called kcal_source and the calorie values going to a column called avg_daily_kcals. Save into variable diet_comp_clean
+```{r}
+diet_comp_clean <- pivot_longer(dietary_comp_by_country,
+  c(alcoholic_beverages_fao_2017:wheat_fao_2017),
+  names_to = "kcal_source",
+  values_to = "avg_daily_kcals"
+)
+
+glimpse(diet_comp_clean)
+view(diet_comp_clean)
+```
+
+Question 3
+Clean kcal_source categories by removing any unnecessary information. Then clean all column names, and rename the column ‘entity’ to ‘country’. Overwrite diet_comp_clean with your results. [Hint: you’ll probably have to use some regex to clean kcal_source categories]
+```{r}
+diet_comp_clean <- diet_comp_clean %>%
+  mutate(kcal_source = str_replace_all(kcal_source,
+                                       pattern = "_", " ")) %>%
+  mutate(kcal_source = str_replace_all(kcal_source, pattern = " fao 2017",
+                                       "")) %>%
+  rename("country" = "entity") %>%
+  clean_names()
+
+diet_comp_clean
+```
+
+Question 4
+Check how many missing values there are in each column
+```{r}
+diet_comp_clean %>%
+  summarise(across(.fns = ~ sum(is.na(.x))))
+
+di_data_file <- diet_comp_clean
+
+di_data_file %>%
+  select(everything()) %>%
+  #  mutate(total_count = nrow(.) * ncol(.)) %>%
+  summarise_all(list(
+    NA_count = ~ sum(is.na(.)),
+    Empty_count = ~ sum(. == "", na.rm = TRUE)
+  )) %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "columns",
+    values_to = "Empty_count"
+  ) %>%
+  filter(Empty_count != 0) %>%
+  arrange(desc(Empty_count)) %>%
+  ggplot(aes(
+    y = reorder(columns, desc(Empty_count)),
+    x = Empty_count,
+    fill = Empty_count
+  )) +
+  geom_col() +
+  geom_label(aes(label = Empty_count)) +
+  annotate("text",
+    x = Inf,
+    y = Inf,
+    label = paste(
+      "total cells:",
+      nrow(di_data_file) * ncol(di_data_file),
+      " nrows",
+      nrow(di_data_file)
+    ),
+    hjust = 1.1,
+    vjust = 1.1,
+    size = 3,
+    color = "black"
+  ) +
+  scale_fill_distiller(palette = "Spectral") +
+  theme_minimal() +
+  labs(
+    title = "a) Empty & NA Cell Count",
+    x = "Number of empty cells",
+    y = "Columns with empty or NA cells"
+  )
+```
+
+Question 5
+Let’s investigate the missing values in column code further. First, check which countries are missing a code. Save these as a character vector, and use this vector to check whether you can find their code anywhere in the dataset, i.e. is the code missing for every observation for these countries.
+```{r}
+missing_code_investigation <- diet_comp_clean %>%
+  group_by(country, code) %>%
+  filter(is.na(code)) %>%
+  summarise(missing = n())
+
+countries_missing_code <- diet_comp_clean %>%
+  filter(is.na(code)) %>%
+  distinct(country) %>%
+  pull()
+
+countries_missing_code
+
+diet_comp_clean %>%
+  filter(country %in% countries_missing_code) %>%
+  filter(is.na(code) == FALSE)
+```
+
+Question 6
+Ok, we have no available country codes for Cabo Verde and the US. Is there anything in the data source about what these should be? No… Ok, better find something online then. Google tells us there’s something called ISO Alpha-3 codes which look pretty promising. Wait, what’s that in your data folder? Read it in! Then find the missing codes!
+```{r}
+country_codes <- read.csv(here("data/country_codes.csv")) %>% clean_names()
+
+country_codes
+
+country_codes %>%
+  filter(country %in% c("United States", "Cape Verde")) %>%
+  select(country, alpha_3_code)
+```
+
+Question 7
+Using a suitable recoding function, fill in the missing (but now found) country codes. Overwrite diet_comp_clean again. Finally, check that there are now no missing values in the code column.
+```{r}
+diet_comp_clean <- diet_comp_clean %>%
+  mutate(code = case_when(
+    country == "United States of America" ~ "USA",
+    country == "Cabo Verde" ~ "CPV",
+    TRUE ~ code
+  ))
+
+sum(is.na(diet_comp_clean$code))
+```
+
+Question 8
+Note: Do NOT overwrite diet_comp_clean with the result of this question.
+Join the two datasets so only countries with matches in both are retained. Create a new logical column that is TRUE if the first two letters of code is the same as alpha_2_code.
+```{r}
+names(diet_comp_clean)
+names(country_codes)
+
+diet_comp_clean %>%
+  inner_join(country_codes, by = "country") %>%
+  distinct(country, code, alpha_2_code) %>%
+  mutate(first_2_match = str_extract(code, "^[A-Z][A-Z]")) %>%
+  mutate(same = first_2_match == alpha_2_code)
+```
+
+Question 9
+That’s enough of country codes! Let’s look at the actual diets of some countries. Using diet_comp_clean, which is hopefully untarnished by the monstrosity that was Question 8, create a subset dataset called uk_diet which only contains data from the UK with all NAs from avg_daily_kcals dropped.
+```{r}
+uk_diet <- diet_comp_clean %>%
+  filter(country == "United Kingdom") %>%
+  drop_na(avg_daily_kcals)
+
+uk_diet
+```
+
+Question 10
+Using uk_diet, create a new column that contains the difference in total calories between a year and the year before. Then find the year where there was the biggest positive difference and the biggest negative difference.
+```{r}
+uk_diet %>%
+  group_by(year) %>%
+  summarise(total_kcals = sum(avg_daily_kcals)) %>%
+  arrange(year) %>%
+  mutate(total_kcals_ly = lag(total_kcals)) %>%
+  mutate(diff = total_kcals - total_kcals_ly)
+```
+
+Question 11
+Back to diet_comp_clean again. For every year between 1990 and 2000 find which country got the most average daily calories from alcoholic beverages, i.e. you want to end up with one country per year.
+```{r}
+diet_comp_clean %>%
+  filter(year >= 1990 & year <= 2000) %>%
+  filter(kcal_source == "alcoholic beverages") %>%
+  group_by(year) %>%
+  slice_max(avg_daily_kcals) %>%
+  select(year, country, avg_daily_kcals, kcal_source)
+```
+
+Question 12
+Now write a function which finds the top calorie source for a user-specified vector of both countries and years. Then use your function to find the top calorie source for the UK and Zimbabwe in 1965, 1975, 1985, 1995 and 2005. Try out your function a few more times for countries/years that you find interesting! Also consider whether there are any limitations of your function.
+```{r}
+top_calory <- function(data, countries, years) {
+  data %>%
+    filter(country %in% countries) %>%
+    filter(year %in% years) %>%
+    group_by(country, year) %>%
+    slice_max(avg_daily_kcals)
+}
+
+top_calory(diet_comp_clean,
+  countries = c("United Kingdom", "Zimbabwe"),
+  years = seq(1965, 2005, 10)
+)
+```
+
+Question 13
+Use your function to find the top calorie source in 1970 for all countries starting with B.
+```{r}
+countries_start_b <- diet_comp_clean %>%
+  filter(str_detect(country, "^B")) %>%
+  distinct(country) %>%
+  pull()
+
+top_calory(diet_comp_clean,
+  countries = countries_start_b,
+  years = 1970
+)
+```

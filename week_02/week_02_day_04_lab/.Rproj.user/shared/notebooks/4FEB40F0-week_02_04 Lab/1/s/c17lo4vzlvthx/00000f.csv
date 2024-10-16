@@ -1,5 +1,0 @@
-"0","uk_diet <- diet_comp_clean %>%"
-"0","  filter(country == ""United Kingdom"") %>%"
-"0","  drop_na(avg_daily_kcals)"
-"0",""
-"0","uk_diet"

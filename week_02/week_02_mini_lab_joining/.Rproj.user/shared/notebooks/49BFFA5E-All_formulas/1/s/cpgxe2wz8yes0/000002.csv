@@ -1,4 +1,0 @@
-"0","```r
-cc_details_joined_to_customer_details %>% 
-  summarise(across(.fns = ~ sum(is.na(.x))))
-```"
