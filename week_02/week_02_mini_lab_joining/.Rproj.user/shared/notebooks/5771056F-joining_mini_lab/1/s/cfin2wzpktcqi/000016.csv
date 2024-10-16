@@ -1,4 +1,0 @@
-"0","actors_more_than_once <- actors %>%"
-"0","  filter(film_count > 1)"
-"0","  "
-"0","actors_more_than_once"
