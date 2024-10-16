@@ -26,90 +26,90 @@ message <- c("does", "this" "work", "?")
 
 toupper(messege)
 
-Error: <text>:1:29: unexpected string constant
-1: message <- c("does", "this" "work"
-                                 ^
+### Error: <text>:1:29: unexpected string constant
+### 1: message <- c("does", "this" "work"
+###                                 ^
 
 
-Error 3.
+## Error 3.
 Select columns mpg, cyl, and disp from mtcars and keep only rows where mpg is less than 20..
 
 mtcars %>% 
   select(mpg, cyl, disp) %>>%
   filter(mpg < 20)
 
-Error in mtcars %>% select(mpg, cyl, disp) %>>% filter(mpg < 20): could not find function "%>>%"
+### Error in mtcars %>% select(mpg, cyl, disp) %>>% filter(mpg < 20): could not find function "%>>%"
 
 
-Error 4.
+## Error 4.
 Select columns Sepal.Length, Sepal.Width, and Species and arrange by Sepal Length.
 iris %>% 
   select(Sepal.Width, Species) %>% 
   arrange(Sepal.Length)
 
-Error in iris %>% select(Sepal.Width, Species) %>% arrange(Sepal.Length): could not find function "%>%"
+### Error in iris %>% select(Sepal.Width, Species) %>% arrange(Sepal.Length): could not find function "%>%"
 
 
-Error 5.
+## Error 5.
 Find the average tooth length for where the supplement is vitamin C.
 
 ToothGrowth %>%
   summarise(avg_len_vc = mean(len)) %>% 
   filter(supp == "VC")
 
-Error in ToothGrowth %>% summarise(avg_len_vc = mean(len)) %>% filter(supp == : could not find function "%>%"
+### Error in ToothGrowth %>% summarise(avg_len_vc = mean(len)) %>% filter(supp == : could not find function "%>%"
 
 
-Error 6.
+## Error 6.
 Create a vector of animals (cat, dog, rabbit, horse), then use the sample function to get 10 random animals from those categories.
 
 animals <- c("cat", dog, "rabbit", "horse")
 
-Error in eval(expr, envir, enclos): object 'dog' not found
+### Error in eval(expr, envir, enclos): object 'dog' not found
 
 sample(animals, 10)
 
-Error in sample(animals, 10): object 'animals' not found
+### Error in sample(animals, 10): object 'animals' not found
 
 
-Error 7.
+## Error 7.
 Create dog_names and cat_names, then use intersect to check which common pet names are shared by both dogs and cats.
 
 dog_names <- c("Lucy", "Molly", "Charlie", "Luna", "Bella", "Cooper")
 
 cat_names < c("Luna", "Lily", "Lucy", "Charlie", "Max", "Oliver")
 
-Error in eval(expr, envir, enclos): object 'cat_names' not found
+### Error in eval(expr, envir, enclos): object 'cat_names' not found
 
 Intersect(dog_names)
 
-Error in Intersect(dog_names): could not find function "Intersect"
+### Error in Intersect(dog_names): could not find function "Intersect"
 
 
-Error 8.
+## Error 8.
 Filter weights equal to or below 150 grams, then create a new column ‘weight_kg’ that contains the weight in kilograms.
 
 chickwts %>% 
   filter(weight =< 150) %>% 
   mutate(weight_kg == weight * 0.001)
 
-Error: <text>:2:18: unexpected '<'
+### Error: <text>:2:18: unexpected '<'
 1: chickwts %>% 
 2:   filter(weight =<
                    ^
 
 
-Error 9.
+## Error 9.
 Create a tibble with column alphabet which contains the English alphabet and column numbers which has a unique number for each letter. Then remove rows where the letter is A, B or C.
 
 tibble(alphabet = LETTERS(),
        numbers = 1:25) %>% 
   filter(letter != c(A, B, C))
 
-Error in tibble(alphabet = LETTERS(), numbers = 1:25) %>% filter(letter != : could not find function "%>%"
+### Error in tibble(alphabet = LETTERS(), numbers = 1:25) %>% filter(letter != : could not find function "%>%"
 
 
-Error 10.
+## Error 10.
 The chunk below creates the data for this error (don’t change anything in it):
 
 Don't change anything in this code chunk
@@ -124,17 +124,17 @@ scent_ratings <- tibble(
   PersonAge = rep(NA, 50)
 )
 
-Error in tibble(iD = rep(1:10, each = 5), SCENT = rep(c("New book", "Cut grass", : could not find function "tibble"
+### Error in tibble(iD = rep(1:10, each = 5), SCENT = rep(c("New book", "Cut grass", : could not find function "tibble"
 
 Clean the variable names and drop missing ratings from scent_ratings and calculate an average rating per scent.
 
 scent_ratings %>% janitor:clean_names()
 
-Error in scent_ratings %>% janitor:clean_names(): could not find function "%>%"
+### Error in scent_ratings %>% janitor:clean_names(): could not find function "%>%"
 
 scent_ratings %>% 
   drop_na() %>% 
   group_by(scent) %>% 
   summarise(mean_rating = mean())
 
-Error in scent_ratings %>% drop_na() %>% group_by(scent) %>% summarise(mean_rating = mean()): could not find function "%>%"
+### Error in scent_ratings %>% drop_na() %>% group_by(scent) %>% summarise(mean_rating = mean()): could not find function "%>%"
