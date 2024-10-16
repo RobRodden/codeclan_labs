@@ -1,7 +1,7 @@
 Solving Errors Lab
 In this lab you will be presented with several code chunks that produce errors. Your task is to try and solve the errors and get the code chunk not only running without an error, but doing what it should be doing. For each chunk you will get a short description of what it is meant to be doing.
 
-Remember to create a new notebook and copy over the contents of the .Rmd file and solve them in there, rather than changing the classnotes! You’ll see the error messages when you try to run the chunks in your notebook - keep fixing them until you don’t get an error (and it’s accomplishing the goal).
+Remember to create a new notebook and copy over the contents of the .Rmd file and solve them in there, rather than changing the class notes! You’ll see the error messages when you try to run the chunks in your notebook - keep fixing them until you don’t get an error (and its accomplishing the goal).
 
 Use what you have learned in the errors lesson to solve these errors. Remember: problem solving and trying to interpret the error messages should be your first approach. Where this does not cut it there are several options: Google, StackOverflow, rubber ducking, specific function help files, checking data types and dimensions.
 
