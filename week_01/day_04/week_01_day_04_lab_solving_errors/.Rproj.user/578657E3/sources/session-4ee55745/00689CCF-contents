@@ -14,9 +14,9 @@ Create some_letters which is a character vector containing the following letters
 
 some_letters <- ("E", "R", "R", "O", "R)
 
-### Error: <text>:1:21: unexpected ','
-### 1: some_letters <- ("E",
-###                       ^
+#### Error: <text>:1:21: unexpected ','
+#### 1: some_letters <- ("E",
+####                       ^
 
 
 ## Error 2.
@@ -57,7 +57,7 @@ ToothGrowth %>%
   summarise(avg_len_vc = mean(len)) %>% 
   filter(supp == "VC")
 
-### Error in ToothGrowth %>% summarise(avg_len_vc = mean(len)) %>% filter(supp == : could not find function "%>%"
+#### Error in ToothGrowth %>% summarise(avg_len_vc = mean(len)) %>% filter(supp == : could not find function "%>%"
 
 
 ## Error 6.
@@ -65,11 +65,11 @@ Create a vector of animals (cat, dog, rabbit, horse), then use the sample functi
 
 animals <- c("cat", dog, "rabbit", "horse")
 
-### Error in eval(expr, envir, enclos): object 'dog' not found
+#### Error in eval(expr, envir, enclos): object 'dog' not found
 
 sample(animals, 10)
 
-### Error in sample(animals, 10): object 'animals' not found
+#### Error in sample(animals, 10): object 'animals' not found
 
 
 ## Error 7.
@@ -79,11 +79,11 @@ dog_names <- c("Lucy", "Molly", "Charlie", "Luna", "Bella", "Cooper")
 
 cat_names < c("Luna", "Lily", "Lucy", "Charlie", "Max", "Oliver")
 
-### Error in eval(expr, envir, enclos): object 'cat_names' not found
+#### Error in eval(expr, envir, enclos): object 'cat_names' not found
 
 Intersect(dog_names)
 
-### Error in Intersect(dog_names): could not find function "Intersect"
+#### Error in Intersect(dog_names): could not find function "Intersect"
 
 
 ## Error 8.
@@ -93,7 +93,7 @@ chickwts %>%
   filter(weight =< 150) %>% 
   mutate(weight_kg == weight * 0.001)
 
-### Error: <text>:2:18: unexpected '<'
+#### Error: <text>:2:18: unexpected '<'
 1: chickwts %>% 
 2:   filter(weight =<
                    ^
@@ -106,7 +106,7 @@ tibble(alphabet = LETTERS(),
        numbers = 1:25) %>% 
   filter(letter != c(A, B, C))
 
-### Error in tibble(alphabet = LETTERS(), numbers = 1:25) %>% filter(letter != : could not find function "%>%"
+#### Error in tibble(alphabet = LETTERS(), numbers = 1:25) %>% filter(letter != : could not find function "%>%"
 
 
 ## Error 10.
@@ -124,17 +124,17 @@ scent_ratings <- tibble(
   PersonAge = rep(NA, 50)
 )
 
-### Error in tibble(iD = rep(1:10, each = 5), SCENT = rep(c("New book", "Cut grass", : could not find function "tibble"
+#### Error in tibble(iD = rep(1:10, each = 5), SCENT = rep(c("New book", "Cut grass", : could not find function "tibble"
 
 Clean the variable names and drop missing ratings from scent_ratings and calculate an average rating per scent.
 
 scent_ratings %>% janitor:clean_names()
 
-### Error in scent_ratings %>% janitor:clean_names(): could not find function "%>%"
+#### Error in scent_ratings %>% janitor:clean_names(): could not find function "%>%"
 
 scent_ratings %>% 
   drop_na() %>% 
   group_by(scent) %>% 
   summarise(mean_rating = mean())
 
-### Error in scent_ratings %>% drop_na() %>% group_by(scent) %>% summarise(mean_rating = mean()): could not find function "%>%"
+#### Error in scent_ratings %>% drop_na() %>% group_by(scent) %>% summarise(mean_rating = mean()): could not find function "%>%"
