@@ -1,5 +1,0 @@
-"0",""
-"0","long_data <- country_data %>%"
-"0","  pivot_longer(cols = c(Y1999:Y2001), names_to = ""year"", values_to = ""value"")"
-"0",""
-"0","long_data"

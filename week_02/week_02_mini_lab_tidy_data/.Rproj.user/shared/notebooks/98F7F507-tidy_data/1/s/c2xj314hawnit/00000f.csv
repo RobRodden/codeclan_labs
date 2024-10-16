@@ -1,4 +1,0 @@
-"0","country_alt_data <- country_alt_data %>%"
-"0","  separate(country, into = c(""number"", ""country""), sep = "" "")"
-"0",""
-"0","country_alt_data"

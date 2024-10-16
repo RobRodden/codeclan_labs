@@ -1,5 +1,0 @@
-"0","country_alt_data_test <- country_alt_data %>%"
-"0","  mutate(code_letter_numb = paste(code_letter, code_numb, sep = """")) %>%"
-"0","  select(number, country, population_Y1999:code_letter_numb)"
-"0",""
-"0","country_alt_data_test"
