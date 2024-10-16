@@ -10,7 +10,6 @@ Note: You may have to fix more than one thing per code chunk to escape the error
 MVP
 
 Error 1.
-
 Create some_letters which is a character vector containing the following letters: “E”, “R”, “R”, “O” and “R”.
 
 some_letters <- ("E", "R", "R", "O", "R)
@@ -21,7 +20,6 @@ Error: <text>:1:21: unexpected ','
 
 
 Error 2.
-
 Create message which is a vector containing the following strings: “does”, “this”, “work” and “?”, then convert the vector to uppercase using toupper.
 
 message <- c("does", "this" "work", "?")
@@ -34,7 +32,6 @@ Error: <text>:1:29: unexpected string constant
 
 
 Error 3.
-
 Select columns mpg, cyl, and disp from mtcars and keep only rows where mpg is less than 20..
 
 mtcars %>% 
@@ -44,8 +41,8 @@ mtcars %>%
 Error in mtcars %>% select(mpg, cyl, disp) %>>% filter(mpg < 20): could not find function "%>>%"
 
 
-Error 4. Select columns Sepal.Length, Sepal.Width, and Species and arrange by Sepal Length.
-
+Error 4.
+Select columns Sepal.Length, Sepal.Width, and Species and arrange by Sepal Length.
 iris %>% 
   select(Sepal.Width, Species) %>% 
   arrange(Sepal.Length)
@@ -54,7 +51,6 @@ Error in iris %>% select(Sepal.Width, Species) %>% arrange(Sepal.Length): could 
 
 
 Error 5.
-
 Find the average tooth length for where the supplement is vitamin C.
 
 ToothGrowth %>%
@@ -64,7 +60,8 @@ ToothGrowth %>%
 Error in ToothGrowth %>% summarise(avg_len_vc = mean(len)) %>% filter(supp == : could not find function "%>%"
 
 
-Error 6. Create a vector of animals (cat, dog, rabbit, horse), then use the sample function to get 10 random animals from those categories.
+Error 6.
+Create a vector of animals (cat, dog, rabbit, horse), then use the sample function to get 10 random animals from those categories.
 
 animals <- c("cat", dog, "rabbit", "horse")
 
@@ -89,7 +86,8 @@ Intersect(dog_names)
 Error in Intersect(dog_names): could not find function "Intersect"
 
 
-Error 8. Filter weights equal to or below 150 grams, then create a new column ‘weight_kg’ that contains the weight in kilograms.
+Error 8.
+Filter weights equal to or below 150 grams, then create a new column ‘weight_kg’ that contains the weight in kilograms.
 
 chickwts %>% 
   filter(weight =< 150) %>% 
@@ -101,7 +99,8 @@ Error: <text>:2:18: unexpected '<'
                    ^
 
 
-Error 9. Create a tibble with column alphabet which contains the English alphabet and column numbers which has a unique number for each letter. Then remove rows where the letter is A, B or C.
+Error 9.
+Create a tibble with column alphabet which contains the English alphabet and column numbers which has a unique number for each letter. Then remove rows where the letter is A, B or C.
 
 tibble(alphabet = LETTERS(),
        numbers = 1:25) %>% 
@@ -111,7 +110,6 @@ Error in tibble(alphabet = LETTERS(), numbers = 1:25) %>% filter(letter != : cou
 
 
 Error 10.
-
 The chunk below creates the data for this error (don’t change anything in it):
 
 Don't change anything in this code chunk
