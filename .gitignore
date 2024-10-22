@@ -4,22 +4,8 @@
 .AppleDouble
 .LSOverride
 
-week_01/.DS_Store
-week_01/day_04/.DS_Store
-week_01/day_04/week_01_day_04_lab_solving_errors/.DS_Store
-week_02/.DS_Store
-week_02/week_02_day_04_lab/.DS_Store
-week_02/week_02_day_04_lab/data/.DS_Store
-week_02/week_02_mini_lab_joining/.DS_Store
-week_02/week_02_mini_lab_joining/data/.DS_Store
-week_02/week_02_mini_lab_tidy_data/.DS_Store
-week_02/week_02_mini_lab_tidy_data//data/.DS_Store
-week_03/.DS_Store
-week_03/day_02/.DS_Store
-
-# Icon must end with two \r
+# Icon
 Icon
-
 
 # Thumbnails
 ._*
@@ -102,11 +88,7 @@ ehthumbs_vista.db
 $RECYCLE.BIN/
 
 # Windows Installer files
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
+*.{cab,msi,msix,msm,msp}
 
 # Windows shortcuts
 *.lnk
