@@ -1,3 +1,5 @@
+Please note you should use apps like MySQLWorkbench or Visual Studio Code to view my answers to the following questions.
+
 SQL Day 2 Lab and Homework
 Duration - 120 minutes
 
