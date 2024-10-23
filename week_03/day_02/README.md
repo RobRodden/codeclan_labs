@@ -17,7 +17,7 @@ When answering these questions, please save your SQL script in DBeaver, copy it 
 1 MVP
 
 
-Question 1.
+Question 1. <br>
 (a). Find the first name, last name and team name of employees who are members of teams.
 
  Hint
