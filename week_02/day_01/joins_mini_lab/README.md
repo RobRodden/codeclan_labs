@@ -28,8 +28,9 @@ From the movies table, find the id of the film The Little Mermaid.
 </blockquote>
 
 Question 2.<br>
-Filter the roles data frame, so we just have roles from the Little Mermaid
-<blockquote>(hint: use the ID you found in the last question).</blockquote>
+Filter the roles data frame, so we just have roles from the Little Mermaid.
+<blockquote>(hint: use the ID you found in the last question).
+</blockquote>
 Save the result as little_mermaid_roles.
 <br>
 <br>
