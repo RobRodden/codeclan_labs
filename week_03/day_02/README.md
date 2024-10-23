@@ -87,7 +87,7 @@ How many of the employees serve on one or more committees?
     All of the details of membership of committees is held in a single table: employees_committees, so this doesn’t require a join.
 </blockquote>
 Some employees may serve in multiple committees. Can you find the number of distinct employees who serve? [Extra hint - do some research on the DISTINCT() function].
-
+<br>
 <br>
 Question 6.<br>
 How many of the employees do not serve on a committee?
@@ -96,4 +96,5 @@ How many of the employees do not serve on a committee?
 <blockquote>Hints
     This requires joining over only two tables
 </blockquote>
+<br>
 Could you use a join and find rows without a match in the join?
