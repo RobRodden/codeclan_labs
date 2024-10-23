@@ -22,9 +22,10 @@ Save into variable diet_comp_clean
 
 
 Question 3<br>
-Clean kcal_source categories by removing any unnecessary information. Then clean all column names, and rename the column ‘entity’ to ‘country’. Overwrite diet_comp_clean with your results.<blockquote>
+Clean kcal_source categories by removing any unnecessary information. Then clean all column names, and rename the column ‘entity’ to ‘country’. Overwrite diet_comp_clean with your results.
+<blockquote>
 [Hint: you’ll probably have to use some regex to clean kcal_source categories]
-</blockquote>
+</blockquote><br>
 
 
 
