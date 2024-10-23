@@ -22,10 +22,9 @@ Question 1. <br>
 
  Hint
 We only want employees who are also in the teams table. So which type of join should we use?
-<br>
+
 
 (b). Find the first name, last name and team name of employees who are members of teams and are enrolled in the pension scheme.
-
 
 
 (c). Find the first name, last name and team name of employees who are members of teams, where their team has a charge cost greater than 80.
@@ -33,7 +32,7 @@ We only want employees who are also in the teams table. So which type of join sh
  Hint
 charge_cost may be the wrong type to compare with value 80. Can you find a way to convert it without changing the database?
 
-
+<br>
 Question 2.
 (a). Get a table of all employees details, together with their local_account_no and local_sort_code, if they have them.
 
