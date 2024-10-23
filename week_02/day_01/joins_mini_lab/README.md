@@ -43,9 +43,8 @@ Do the last join, but with an inner join instead. Is the data different? Why is 
 <br>
 Question 1.<br>
 For all actors who have appeared in at least two films. Call this data frame actors_more_than_once.
-
-
-
+<br>
+<br>
 Question 2.<br>
 Left join actors_more_than_once to roles, so we can see all the actors roles those actors played in.
 
