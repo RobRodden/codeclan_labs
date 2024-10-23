@@ -10,7 +10,7 @@ You can read more about the data here in the ‘Sources’ tab.
 <br>
 <br>
 <br>
-Question 1.
+Question 1.<br>
 Read in the data containing dietary compositions and familiarise yourself with it.
 
 
