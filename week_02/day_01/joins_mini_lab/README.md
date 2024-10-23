@@ -31,8 +31,7 @@ Question 2.<br>
 Filter the roles data frame, so we just have roles from the Little Mermaid.
 <blockquote>
 (hint: use the ID you found in the last question).
-</blockquote>
-Save the result as little_mermaid_roles.
+</blockquote> Save the result as little_mermaid_roles.
 <br>
 <br>
 Question 3.<br>
