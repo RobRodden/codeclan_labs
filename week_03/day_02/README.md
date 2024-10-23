@@ -75,11 +75,11 @@ If you GROUP BY teams.id, because it’s the primary key, you can SELECT any oth
 
 (c). How would you amend your query from above to show only those teams with a total_day_charge greater than 5000?
 
-
+<br>
 2 Extension
 
 
-Question 5.
+Question 5.<br>
 How many of the employees serve on one or more committees?
 
 
