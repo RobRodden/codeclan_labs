@@ -51,6 +51,7 @@ What sort of JOIN is needed if we want details of all employees, even if they do
 Question 3.<br>
 (a). Make a table, which has each employee id along with the team that employee belongs to.
 
+
 (b). Breakdown the number of employees in each of the teams.
 
 <blockquote>Hint
@@ -64,12 +65,12 @@ Question 4.<br>
 (a). Create a table with the team id, team name and the count of the number of employees in each team.
 
 
-
 (b). The total_day_charge of a team is defined as the charge_cost of the team multiplied by the number of employees in the team. Calculate the total_day_charge for each team.
 
 <blockquote>Hint
     If you GROUP BY teams.id, because it’s the primary key, you can SELECT any other column of teams that you want (this is an exception to the rule that normally you can only SELECT a column that you GROUP BY).
 </blockquote>
+
 
 (c). How would you amend your query from above to show only those teams with a total_day_charge greater than 5000?
 
