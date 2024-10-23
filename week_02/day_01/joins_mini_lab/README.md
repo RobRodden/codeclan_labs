@@ -52,7 +52,8 @@ Left join actors_more_than_once to roles, so we can see all the actors roles tho
 <br>
 Question 3.<br>
 Left join the result from above to movies, so we can see details of each movie for these roles
-
+<br>
+<br>
 Question 4.<br>
 For each actor, find the average rating of the films they appeared. Find the five actors with the highest average rank of films they appeared in.
 <br>
