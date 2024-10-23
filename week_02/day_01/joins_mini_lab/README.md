@@ -37,14 +37,16 @@ Carry out a left join on this new data frame and the actors data frame, to find 
 <br>
 <br>
 Question 4.<br>
-Do the last join, but with an inner join instead. Is the data different? Why is that?
+Do the last join, but with an inner join instead.<br>
+Is the data different? Why is that?
 <br>
 <br>
 <br>
 1.3 Actors<br>
 <br>
 Question 1.<br>
-For all actors who have appeared in at least two films. Call this data frame actors_more_than_once.
+For all actors who have appeared in at least two films.<br>
+Call this data frame actors_more_than_once.
 <br>
 <br>
 Question 2.<br>
@@ -56,7 +58,7 @@ Left join the result from above to movies, so we can see details of each movie f
 <br>
 <br>
 Question 4.<br>
-For each actor, find the average rating of the films they appeared.
+For each actor, find the average rating of the films they appeared.<br>
 Find the five actors with the highest average rank of films they appeared in.
 <br>
 <br>
@@ -64,5 +66,5 @@ Find the five actors with the highest average rank of films they appeared in.
 1.4 The Busiest Actor<br>
 <br>
 Question 1.<br>
-Find the actor who has appeared in most films.
+Find the actor who has appeared in most films.<br>
 List the films they appeared in, the year the film was released and their role in the film.
