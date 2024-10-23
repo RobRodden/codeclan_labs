@@ -6,16 +6,17 @@ Duration: 30 minutes
 1.1 Data Investigation
 
 Question 1.<br>
-Read the files “actors.csv”, “movies.csv” and “roles.csv” into R. You might get warnings here - don’t worry the data is okay for what we are trying to do.
+Read the files “actors.csv”, “movies.csv” and “roles.csv” into R.  You might get warnings here - don’t worry the data is okay for what we are trying to do.
 
 
 
 Question 2.<br>
-What are the primary keys and the foreign keys for each data frame?
+What are the primary keys and the foreign keys for each data frame?<br>
 What kind of relationship (one-to-one, one-to-many, many-to-many) is there between
-actors and roles
+<blockquote>actors and roles
 movies and roles
 actors and movies
+</blockquote>
 
 
 1.2 Little Mermaid, The
