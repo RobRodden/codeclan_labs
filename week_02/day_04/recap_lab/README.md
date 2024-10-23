@@ -73,11 +73,11 @@ Question 12<br>
 Now write a function which finds the top calorie source for a user-specified vector of both countries and years.<br>
 Then use your function to find the top calorie source for the UK and Zimbabwe in 1965, 1975, 1985, 1995 and 2005.<br>
 Try out your function a few more times for countries/years that you find interesting! Also consider whether there are any limitations of your function.
-
-
+<br>
+<br>
 Question 13<br>
 Use your function to find the top calorie source in 1970 for all countries starting with B.
-
-
+<br>
+<br>
 Question 14<br>
 If you have made it this far, well done! If you are still itching to do some more data analysis/coding, you can explore the dataset yourself and try to discover something interesting or just practice anything you still feel unsure about!
