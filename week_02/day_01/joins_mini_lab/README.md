@@ -23,7 +23,8 @@ actors and movies<br>
 1.2 Little Mermaid, The<br>
 <br>
 Question 1.<br>
-From the movies table, find the id of the film The Little Mermaid. (In the data as “Little Mermaid, The”).
+From the movies table, find the id of the film The Little Mermaid.
+<blockquote>(In the data as “Little Mermaid, The”).</blockquote>
 <br>
 <br>
 Question 2.<br>
