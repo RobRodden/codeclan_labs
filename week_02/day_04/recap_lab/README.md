@@ -58,8 +58,8 @@ Create a new logical column that is TRUE if the first two letters of code is the
 <br>
 Question 9<br>
 That’s enough of country codes! Let’s look at the actual diets of some countries. Using diet_comp_clean, which is hopefully untarnished by the monstrosity that was Question 8, create a new variable called uk_diet which only contains data from the UK and with all NAs from avg_daily_kcals dropped.
-
-
+<br>
+<br>
 Question 10<br>
 Using uk_diet, create a new column that contains the difference in total calories between a year and the year before.<br>
 Then find the year where there was the biggest positive difference and the biggest negative difference.
