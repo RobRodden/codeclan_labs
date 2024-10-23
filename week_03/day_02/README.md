@@ -61,8 +61,8 @@ You will need to add a group by to the table you created above.
 
 (c). Order the table above by so that the teams with the least employees come first.
 
-
-Question 4.
+<br>
+Question 4.<br>
 (a). Create a table with the team id, team name and the count of the number of employees in each team.
 
 
