@@ -94,7 +94,6 @@ How many of the employees do not serve on a committee?
 
 
 <blockquote>Hints
-    This requires joining over only two tables
+    This requires joining over only two tables.
 </blockquote>
-<br>
 Could you use a join and find rows without a match in the join?
