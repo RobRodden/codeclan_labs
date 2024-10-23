@@ -29,9 +29,9 @@ Question 1. <br>
 
 (c). Find the first name, last name and team name of employees who are members of teams, where their team has a charge cost greater than 80.
 
-    Hint
+<blockquote>Hint
     charge_cost may be the wrong type to compare with value 80. Can you find a way to convert it without changing the database?
-
+</blockquote>
 <br>
 Question 2.<br>
 (a). Get a table of all employees details, together with their local_account_no and local_sort_code, if they have them.
