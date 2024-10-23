@@ -55,7 +55,7 @@ Note: Do NOT overwrite diet_comp_clean with the result of this question.
 Join the two datasets so only countries with matches in both are retained.<br>
 Create a new logical column that is TRUE if the first two letters of code is the same as alpha_2_code.
 
-
+<br>
 Question 9<br>
 That’s enough of country codes! Let’s look at the actual diets of some countries. Using diet_comp_clean, which is hopefully untarnished by the monstrosity that was Question 8, create a new variable called uk_diet which only contains data from the UK and with all NAs from avg_daily_kcals dropped.
 
