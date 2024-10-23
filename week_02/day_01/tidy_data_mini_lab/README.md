@@ -6,7 +6,9 @@ Now it’s your turn to practice the verbs on a new dataset. Complete the follow
 1 MVP<br>
 <br>
 Task 1.<br>
-Load in the country_data.csv file and take a look at it. What needs changed in this to make it tidy? Which columns need made into long format, and which need spread to rows?
+Load in the country_data.csv file and take a look at it.<br>
+What needs changed in this to make it tidy?<br>
+Which columns need made into long format, and which need spread to rows?
 
 
 
