@@ -24,8 +24,8 @@ Clean kcal_source categories by removing any unnecessary information.<br>
 Then clean all column names, and rename the column ‘entity’ to ‘country’.<br>
 Overwrite diet_comp_clean with your results.
 <blockquote>[Hint: you’ll probably have to use some regex to clean kcal_source categories]
-</blockquote><br>
-
+</blockquote>
+<br>
 
 Question 4<br>
 Check how many missing values there are in each column.
