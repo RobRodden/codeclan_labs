@@ -25,7 +25,7 @@ Question 1.<br>
 From the movies table, find the id of the film The Little Mermaid. (In the data as “Little Mermaid, The”).
 
 
-
+<br>
 Question 2.
 Filter the roles data frame, so we just have roles from the Little Mermaid (hint: use the ID you found in the last question). Save the result as little_mermaid_roles.
 
