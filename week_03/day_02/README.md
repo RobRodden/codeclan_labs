@@ -20,9 +20,9 @@ When answering these questions, please save your SQL script in DBeaver, copy it 
 Question 1. <br>
 (a). Find the first name, last name and team name of employees who are members of teams.
 
-    Hint
+<blockquote>Hint
     We only want employees who are also in the teams table. So which type of join should we use?
-
+</blockquote>
 
 (b). Find the first name, last name and team name of employees who are members of teams and are enrolled in the pension scheme.
 
