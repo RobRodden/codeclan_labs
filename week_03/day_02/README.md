@@ -51,8 +51,6 @@ What sort of JOIN is needed if we want details of all employees, even if they do
 Question 3.<br>
 (a). Make a table, which has each employee id along with the team that employee belongs to.
 
-
-
 (b). Breakdown the number of employees in each of the teams.
 
 <blockquote>Hint
