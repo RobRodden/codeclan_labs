@@ -9,6 +9,7 @@ The data for this lab comes from Our World in Data and contains the average dail
 You can read more about the data here in the ‘Sources’ tab.
 <br>
 <br>
+<br>
 Question 1
 
 Read in the data containing dietary compositions and familiarise yourself with it.
