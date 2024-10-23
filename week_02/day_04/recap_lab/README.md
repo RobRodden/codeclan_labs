@@ -16,7 +16,8 @@ Read in the data containing dietary compositions and familiarise yourself with i
 
 
 Question 2<br>
-Change the data to long format with food categories going to a column called kcal_source and the calorie values going to a column called avg_daily_kcals. Save into variable diet_comp_clean
+Change the data to long format with food categories going to a column called kcal_source and the calorie values going to a column called avg_daily_kcals.
+Save into variable diet_comp_clean
 
 
 
