@@ -3,7 +3,7 @@ Recap Lab
 
 Use this lab to recap (almost) everything you've learnt so far on the course.
 
-The data for this lab comes from Our World in Data and contains the average daily per capita supply of calories from a range of food commodities by country across many years.
+The data for this lab comes from Our World in Data and contains the average daily per capita supply of calories from a range of food commodities by country across many years.<br>
 You can read more about the data here in the ‘Sources’ tab.
 
 <br>
