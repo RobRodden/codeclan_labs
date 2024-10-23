@@ -13,9 +13,9 @@ Read the files “actors.csv”, “movies.csv” and “roles.csv” into R.  Y
 Question 2.<br>
 What are the primary keys and the foreign keys for each data frame?<br>
 What kind of relationship (one-to-one, one-to-many, many-to-many) is there between
-<blockquote>actors and roles
-movies and roles
-actors and movies
+<blockquote>actors and roles<br>
+movies and roles<br>
+actors and movies<br>
 </blockquote>
 
 
