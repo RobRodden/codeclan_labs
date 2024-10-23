@@ -32,7 +32,8 @@ Check how many missing values there are in each column.
 
 
 Question 5<br>
-Let’s investigate the missing values in column code further. First, check which countries are missing a code.<br>
+Let’s investigate the missing values in column code further.<br>
+First, check which countries are missing a code.<br>
 Save these as a character vector, and use this vector to check whether you can find their code anywhere in the dataset, i.e. is the code missing for every observation for these countries.
 
 
