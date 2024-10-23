@@ -39,7 +39,8 @@ Carry out a left join on this new data frame and the actors data frame, to find 
 <br>
 Question 4.<br>
 Do the last join, but with an inner join instead.<br>
-Is the data different? Why is that?
+Is the data different?<br>
+Why is that?
 <br>
 <br>
 <br>
