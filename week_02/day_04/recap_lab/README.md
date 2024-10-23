@@ -42,7 +42,8 @@ Google tells us there’s something called ISO Alpha-3 codes which look pretty p
 
 Question 7<br>
 Using a suitable recoding function, fill in the lost (but now found) country codes.<br>
-Overwrite diet_comp_clean again. Finally, check that there are now no missing values in the code column.
+Overwrite diet_comp_clean again.<br>
+Finally, check that there are now no missing values in the code column.
 
 
 Question 8<br>
