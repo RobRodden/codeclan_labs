@@ -63,12 +63,12 @@ That’s enough of country codes! Let’s look at the actual diets of some count
 Question 10<br>
 Using uk_diet, create a new column that contains the difference in total calories between a year and the year before.<br>
 Then find the year where there was the biggest positive difference and the biggest negative difference.
-
-
+<br>
+<br>
 Question 11<br>
 Back to diet_comp_clean again. For every year between 1990 and 2000, find which country got the most average daily calories from alcoholic beverages, i.e. you want to end up with one country per year.
-
-
+<br>
+<br>
 Question 12<br>
 Now write a function which finds the top calorie source for a user-specified vector of both countries and years.<br>
 Then use your function to find the top calorie source for the UK and Zimbabwe in 1965, 1975, 1985, 1995 and 2005.<br>
