@@ -2,6 +2,7 @@ Joining Mini-Lab
 Duration: 30 minutes
 
 1 MVP <br>
+<br>
 1.1 Data Investigation
 
 Question 1.
