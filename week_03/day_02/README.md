@@ -47,8 +47,8 @@ What sort of JOIN is needed if we want details of all employees, even if they do
  Hint
 The name of the team is in the teams table, so we will need to do another join.
 
-
-Question 3.
+<br>
+Question 3.<br>
 (a). Make a table, which has each employee id along with the team that employee belongs to.
 
 
