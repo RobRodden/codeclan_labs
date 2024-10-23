@@ -39,7 +39,7 @@ Question 4.<br>
 Do the last join, but with an inner join instead. Is the data different? Why is that?
 <br>
 <br>
-
+<br>
 1.3 Actors<br>
 <br>
 Question 1.<br>
