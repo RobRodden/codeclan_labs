@@ -34,8 +34,7 @@ Save the result as little_mermaid_roles.
 Question 3.<br>
 Carry out a left join on this new data frame and the actors data frame, to find the actors which appeared in The Little Mermaid.
 
-
-
+<br>
 Question 4.<br>
 Do the last join, but with an inner join instead. Is the data different? Why is that?
 
