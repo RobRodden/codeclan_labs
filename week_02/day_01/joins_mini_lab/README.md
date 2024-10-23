@@ -6,7 +6,7 @@ Duration: 30 minutes
 1.1 Data Investigation
 
 Question 1.<br>
-Read the files “actors.csv”, “movies.csv” and “roles.csv” into R.
+Read the files “actors.csv”, “movies.csv” and “roles.csv” into R.<br>
 You might get warnings here - don’t worry the data is okay for what we are trying to do.
 
 
