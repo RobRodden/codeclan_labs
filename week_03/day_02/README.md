@@ -10,7 +10,7 @@ Submission
 
 When answering these questions, please save your SQL script in DBeaver, copy it over to your homework repo and then add, commit and push that for submission tonight. Please add section and question numbers as SQL comments, like so:
 
---MVP
+--MVP <br>
 --Q1
 
 
