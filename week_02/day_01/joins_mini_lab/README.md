@@ -6,7 +6,8 @@ Duration: 30 minutes
 1.1 Data Investigation
 
 Question 1.<br>
-Read the files “actors.csv”, “movies.csv” and “roles.csv” into R.  You might get warnings here - don’t worry the data is okay for what we are trying to do.
+Read the files “actors.csv”, “movies.csv” and “roles.csv” into R.
+You might get warnings here - don’t worry the data is okay for what we are trying to do.
 
 
 
@@ -55,11 +56,13 @@ Left join the result from above to movies, so we can see details of each movie f
 <br>
 <br>
 Question 4.<br>
-For each actor, find the average rating of the films they appeared. Find the five actors with the highest average rank of films they appeared in.
+For each actor, find the average rating of the films they appeared.
+Find the five actors with the highest average rank of films they appeared in.
 <br>
 <br>
 <br>
 1.4 The Busiest Actor<br>
 <br>
 Question 1.<br>
-Find the actor who has appeared in most films. List the films they appeared in, the year the film was released and their role in the film.
+Find the actor who has appeared in most films.
+List the films they appeared in, the year the film was released and their role in the film.
