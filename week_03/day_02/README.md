@@ -12,7 +12,7 @@ When answering these questions, please save your SQL script in DBeaver, copy it 
 
 --MVP <br>
 --Q1
-
+<br>
 
 1 MVP
 
@@ -88,8 +88,8 @@ All of the details of membership of committees is held in a single table: employ
 
 Some employees may serve in multiple committees. Can you find the number of distinct employees who serve? [Extra hint - do some research on the DISTINCT() function].
 
-
-Question 6.
+<br>
+Question 6.<br>
 How many of the employees do not serve on a committee?
 
 
