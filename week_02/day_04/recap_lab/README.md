@@ -28,7 +28,7 @@ Overwrite diet_comp_clean with your results.
 
 
 Question 4<br>
-Check how many missing values there are in each column
+Check how many missing values there are in each column.
 
 
 Question 5<br>
