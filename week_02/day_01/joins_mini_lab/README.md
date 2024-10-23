@@ -5,13 +5,12 @@ Duration: 30 minutes
 <br>
 1.1 Data Investigation
 
-Question 1.
+Question 1.<br>
 Read the files “actors.csv”, “movies.csv” and “roles.csv” into R. You might get warnings here - don’t worry the data is okay for what we are trying to do.
 
 
 
 Question 2.
-
 What are the primary keys and the foreign keys for each data frame?
 What kind of relationship (one-to-one, one-to-many, many-to-many) is there between
 actors and roles
