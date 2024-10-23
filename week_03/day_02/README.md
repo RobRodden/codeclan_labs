@@ -36,17 +36,17 @@ Question 1. <br>
 Question 2.<br>
 (a). Get a table of all employees details, together with their local_account_no and local_sort_code, if they have them.
 
-    Hints
+<blockquote>Hints
     local_account_no and local_sort_code are fields in pay_details, and employee details are held in employees, so this query requires a JOIN.
-
+</blockquote>
 What sort of JOIN is needed if we want details of all employees, even if they don’t have stored local_account_no and local_sort_code?
 
 
 (b). Amend your query above to also return the name of the team that each employee belongs to.
 
-    Hint
+<blockquote>Hint
     The name of the team is in the teams table, so we will need to do another join.
-
+</blockquote>
 <br>
 Question 3.<br>
 (a). Make a table, which has each employee id along with the team that employee belongs to.
@@ -55,9 +55,9 @@ Question 3.<br>
 
 (b). Breakdown the number of employees in each of the teams.
 
-    Hint
+<blockquote>Hint
     You will need to add a group by to the table you created above.
-
+</blockquote>
 
 (c). Order the table above by so that the teams with the least employees come first.
 
@@ -69,9 +69,9 @@ Question 4.<br>
 
 (b). The total_day_charge of a team is defined as the charge_cost of the team multiplied by the number of employees in the team. Calculate the total_day_charge for each team.
 
-    Hint
+<blockquote>Hint
     If you GROUP BY teams.id, because it’s the primary key, you can SELECT any other column of teams that you want (this is an exception to the rule that normally you can only SELECT a column that you GROUP BY).
-
+</blockquote>
 
 (c). How would you amend your query from above to show only those teams with a total_day_charge greater than 5000?
 
@@ -83,9 +83,9 @@ Question 5.<br>
 How many of the employees serve on one or more committees?
 
 
-    Hints
+<blockquote>Hints
     All of the details of membership of committees is held in a single table: employees_committees, so this doesn’t require a join.
-
+</blockquote>
 Some employees may serve in multiple committees. Can you find the number of distinct employees who serve? [Extra hint - do some research on the DISTINCT() function].
 
 <br>
@@ -93,7 +93,7 @@ Question 6.<br>
 How many of the employees do not serve on a committee?
 
 
-    Hints
+<blockquote>Hints
     This requires joining over only two tables
-
+</blockquote>
 Could you use a join and find rows without a match in the join?
