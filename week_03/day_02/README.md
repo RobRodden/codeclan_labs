@@ -77,7 +77,7 @@ If you GROUP BY teams.id, because it’s the primary key, you can SELECT any oth
 
 <br>
 2 Extension
-
+<br>
 <br>
 Question 5.<br>
 How many of the employees serve on one or more committees?
