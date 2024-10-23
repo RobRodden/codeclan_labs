@@ -38,8 +38,8 @@ Carry out a left join on this new data frame and the actors data frame, to find 
 Question 4.<br>
 Do the last join, but with an inner join instead. Is the data different? Why is that?
 <br>
-
 <br>
+
 1.3 Actors<br>
 <br>
 Question 1.<br>
