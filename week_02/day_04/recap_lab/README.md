@@ -20,7 +20,8 @@ Save into variable diet_comp_clean
 
 
 Question 3<br>
-Clean kcal_source categories by removing any unnecessary information. Then clean all column names, and rename the column ‘entity’ to ‘country’. Overwrite diet_comp_clean with your results.
+Clean kcal_source categories by removing any unnecessary information.<br>
+Then clean all column names, and rename the column ‘entity’ to ‘country’. Overwrite diet_comp_clean with your results.
 <blockquote>[Hint: you’ll probably have to use some regex to clean kcal_source categories]
 </blockquote><br>
 
@@ -30,23 +31,26 @@ Check how many missing values there are in each column
 
 
 Question 5<br>
-Let’s investigate the missing values in column code further. First, check which countries are missing a code. Save these as a character vector, and use this vector to check whether you can find their code anywhere in the dataset, i.e. is the code missing for every observation for these countries.
+Let’s investigate the missing values in column code further. First, check which countries are missing a code.<br>
+Save these as a character vector, and use this vector to check whether you can find their code anywhere in the dataset, i.e. is the code missing for every observation for these countries.
 
 
 Question 6<br>
-Ok, we have no available country codes for Cabo Verde and the US in this dataset. Is there anything in the data source about what these should be? No… Ok, better find something online then. Google tells us there’s something called ISO Alpha-3 codes which look pretty promising. Wait, what’s that in your data folder? Read it in! Then find the missing codes!
+Ok, we have no available country codes for Cabo Verde and the US in this dataset. Is there anything in the data source about what these should be? No… Ok, better find something online then.<br>
+Google tells us there’s something called ISO Alpha-3 codes which look pretty promising. Wait, what’s that in your data folder? Read it in! Then find the missing codes!
 
 
 Question 7<br>
-Using a suitable recoding function, fill in the lost (but now found) country codes. Overwrite diet_comp_clean again. Finally, check that there are now no missing values in the code column.
+Using a suitable recoding function, fill in the lost (but now found) country codes.<br>
+Overwrite diet_comp_clean again. Finally, check that there are now no missing values in the code column.
 
 
 Question 8<br>
 <blockquote>
 Note: Do NOT overwrite diet_comp_clean with the result of this question.
 </blockquote>
-
-Join the two datasets so only countries with matches in both are retained. Create a new logical column that is TRUE if the first two letters of code is the same as alpha_2_code.
+Join the two datasets so only countries with matches in both are retained.<br>
+Create a new logical column that is TRUE if the first two letters of code is the same as alpha_2_code.
 
 
 Question 9<br>
@@ -54,7 +58,8 @@ That’s enough of country codes! Let’s look at the actual diets of some count
 
 
 Question 10<br>
-Using uk_diet, create a new column that contains the difference in total calories between a year and the year before. Then find the year where there was the biggest positive difference and the biggest negative difference.
+Using uk_diet, create a new column that contains the difference in total calories between a year and the year before.<br>
+Then find the year where there was the biggest positive difference and the biggest negative difference.
 
 
 Question 11<br>
@@ -62,7 +67,9 @@ Back to diet_comp_clean again. For every year between 1990 and 2000, find which 
 
 
 Question 12<br>
-Now write a function which finds the top calorie source for a user-specified vector of both countries and years. Then use your function to find the top calorie source for the UK and Zimbabwe in 1965, 1975, 1985, 1995 and 2005. Try out your function a few more times for countries/years that you find interesting! Also consider whether there are any limitations of your function.
+Now write a function which finds the top calorie source for a user-specified vector of both countries and years.<br>
+Then use your function to find the top calorie source for the UK and Zimbabwe in 1965, 1975, 1985, 1995 and 2005.<br>
+Try out your function a few more times for countries/years that you find interesting! Also consider whether there are any limitations of your function.
 
 
 Question 13<br>
