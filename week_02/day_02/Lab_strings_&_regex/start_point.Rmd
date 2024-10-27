@@ -267,12 +267,14 @@ whole_text %>%
 
 ```
 
-
+Sample text to check function correctly replaces identified text.
 ```{r}
-# Sample text to try
 text_sample <- " GIN. gin. gin VICTORY GIN and Victory Gin. Gingersnap"
 
-# Function to perform case-sensitive replacements of 'gin' and 'Victory Gin'
+```
+
+Function to perform case-sensitive replacements of 'gin' and 'Victory Gin'
+```{r}
 replace_gin <- function(text) {
   # Define pattern to match standalone 'gin'/'GIN' or mixed case
   pattern <- "\\b[gG][iI][nN]\\b"
