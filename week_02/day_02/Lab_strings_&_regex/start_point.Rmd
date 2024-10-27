@@ -132,30 +132,30 @@ Already! He sat as still as a mouse, in the futile hope that whoever it was migh
 Question 1.
 Are the Thought Police ever mentioned?
 ```{r}
-whole_text %>% 
+whole_text %>%
   str_detect("(?i)thought police")
 ```
 
 Question 2.
 Count how often Big Brother is mentioned
 ```{r}
-whole_text %>% 
-  str_extract_all("(?i)big brother") %>% 
-  flatten_chr() %>% 
+whole_text %>%
+  str_extract_all("(?i)big brother") %>%
+  flatten_chr() %>%
   length()
 ```
 
 Question 3.
 The chapter is written from the point of view of the protagonist, Winston. Does he ever mention the other main character (Julia) by name?
 ```{r}
-whole_text %>% 
+whole_text %>%
   str_detect("(?i)julia")
 ```
 
 Question 4.
 Winston writes the date in a specific format: month nth, year eg. August 5th, 2019. Write a regular expression to match dates in that format and find the date written in his diary.
 ```{r}
-whole_text %>% 
+whole_text %>%
   str_extract("[A-Z]{1}[a-z]+[:space:][0-9]th[:punct:][:space:][0-9]+")
 
 ```
@@ -173,7 +173,7 @@ Winston wants some anonymity, redact his name somehow.
 ```{r}
 pattern <- "(?i)Winston Smith|Winston"
 
-whole_text_redacted <- whole_text %>% 
+whole_text_redacted <- whole_text %>%
   str_replace_all(pattern, "REDACTED")
 
 whole_text_redacted
@@ -184,7 +184,7 @@ or this (which is less effective)
 ```{r}
 pattern_alt <- "Winston Smith|Winston"
 
-whole_text_redacted_alt <- whole_text %>% 
+whole_text_redacted_alt <- whole_text %>%
   str_replace_all(pattern, "REDACTED")
 
 whole_text_redacted_alt
@@ -197,8 +197,8 @@ Stocks of Victory Gin have run out and the people of Oceania will have to drink 
 # identify what needs to changed.
 pattern1 <- "[ ,\\.-][Gg][Ii][Nn][ , \\.-]"
 
-whole_text_extract <- whole_text %>% 
-  str_extract_all(pattern1) %>% 
+whole_text_extract <- whole_text %>%
+  str_extract_all(pattern1) %>%
   list_c()
 
 whole_text_extract
@@ -206,14 +206,14 @@ whole_text_extract
 
 ```{r}
 # make the changes.
-whole_text_replaced <- whole_text %>% 
+whole_text_replaced <- whole_text %>%
   str_replace_all(c(" GIN." = " VODKA.",
                     " gin." = " vodka.",
                     " gin " = " vodka "))
 
 # check the changes have worked.
-whole_text_extract <- whole_text_replaced %>% 
-  str_extract_all(pattern1) %>% 
+whole_text_extract <- whole_text_replaced %>%
+  str_extract_all(pattern1) %>%
   list_c()
 
 whole_text_extract
@@ -226,8 +226,8 @@ Big Brother is rebranding and has decided that the various ministries will now b
 # identify what needs to changed.
 pattern2 <- "Department|Ministry|Ministrie|Mini"
 
-whole_text_extract <- whole_text %>% 
-  str_extract_all(pattern2) %>% 
+whole_text_extract <- whole_text %>%
+  str_extract_all(pattern2) %>%
   list_c()
 
 unique(whole_text_extract)
@@ -236,7 +236,7 @@ unique(whole_text_extract)
 
 ```{r}
 # make the required changes.
-whole_text_test <- whole_text %>% 
+whole_text_test <- whole_text %>%
   str_replace_all(c("Department" = "Section",
                     "Ministry" = "Department",
                     "Ministrie" = "Department",
@@ -245,10 +245,10 @@ whole_text_test <- whole_text %>%
 # confirm changes
 pattern2_alt <- c("Section", "Department", "Dep")
 
-whole_text_test2 <- whole_text_test %>% 
-  str_extract_all(pattern2_alt) %>% 
+whole_text_test2 <- whole_text_test %>%
+  str_extract_all(pattern2_alt) %>%
   list_c()
-  
+
 unique(whole_text_test2)
 ```
 
@@ -261,8 +261,8 @@ Stocks of Victory Gin have run out and the people of Oceania will have to drink 
 # again, identify what needs changed.
 pattern3 <- "[ ,\\.-][Gg][Ii][Nn][ ,\\.-]"
 
-whole_text %>% 
-  str_extract_all(pattern3) %>% 
+whole_text %>%
+  str_extract_all(pattern3) %>%
   list_c()
 
 ```
@@ -276,13 +276,13 @@ text_sample <- " GIN. gin. gin VICTORY GIN and Victory Gin. Gingersnap"
 replace_gin <- function(text) {
   # Define pattern to match standalone 'gin'/'GIN' or mixed case
   pattern <- "\\b[gG][iI][nN]\\b"
-  
+
   # Find all matches of the pattern
   match_positions <- gregexpr(pattern, text, perl = TRUE, ignore.case = FALSE)
-  
+
   # Extract matches
   matches <- regmatches(text, match_positions)[[1]]
-  
+
   # Replace each match based on case
   replacements <- sapply(matches, function(match) {
     if (grepl("^[A-Z]+$", match)) {
@@ -293,10 +293,10 @@ replace_gin <- function(text) {
       "Vodka"  # Replace capitalized "Gin" or "Victory Gin"
     }
   })
-  
+
   # Replace matches in original text
   regmatches(text, match_positions) <- list(replacements)
-  
+
   return(text)
 }
 
@@ -311,6 +311,10 @@ cat(whole_text_gin_replaced)
 Question 7.
 Big Brother is rebranding and has decided that the various ministries will now be known as departments. The old departments are now called sections. The Newspeak titles will use “Dep” instead of “Mini”.
 ```{r}
+# test text to check that it's working (commented out)
+# test_text2 <- "Department Ministry Ministrie Mini"
+
+# function for task
 replace_words <- function(text, replacements) {
   for (i in seq_along(replacements)) {
     text <- str_replace_all(text, names(replacements)[i], replacements[i])
@@ -318,8 +322,12 @@ replace_words <- function(text, replacements) {
   return(text)
 }
 
-replacements <- c("Department", "Ministry", "Ministrie", "Mini") -> "Dep"
+# replace matches in original text
+replacements <- c(Department = "Section", Ministry = "Department", Ministrie = "Department", Mini = "Dep")
 
-whole_text_test
+whole_text2 <- whole_text %>%
+  replace_words(replacements)
+
+whole_text2
 ```
 
